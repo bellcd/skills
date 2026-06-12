@@ -11,5 +11,4 @@ General style rules in [JAVASCRIPT.md](JAVASCRIPT.md) also apply to TypeScript f
   type User = z.infer<typeof zUser>;
   ```
 
-- Prefer required parameters. Optional and default parameters should be used very sparingly, if at all.
 - Only use the `satisfies` keyword when it's actually needed.

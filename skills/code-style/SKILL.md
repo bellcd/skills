@@ -9,6 +9,7 @@ Rules phrased "in general" or "prefer" are strong defaults — deviate only for 
 
 Load only the reference files relevant to the current task:
 
+- [GENERAL.md](GENERAL.md) — applies to all languages
 - [JAVASCRIPT.md](JAVASCRIPT.md)
 - [TYPESCRIPT.md](TYPESCRIPT.md)
 - [REACT.md](REACT.md)
