@@ -55,3 +55,7 @@ particular test while iterating.
 
 - Assert against the DOM with `expect` matchers that check concrete state, e.g. that a particular element has particular text.
 - Skip explicit visibility checks — many Playwright methods perform them automatically.
+
+## Regex
+
+Prefer exact strings over regex whenever possible, e.g. in matchers.
