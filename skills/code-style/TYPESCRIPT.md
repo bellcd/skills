@@ -16,7 +16,7 @@ General style rules in [JAVASCRIPT.md](JAVASCRIPT.md) also apply to TypeScript f
 
   ```ts
   // Prefer
-  type Session = { targets: Array<{ value: string; success: string }> };
+  type Targets = Array<{ value: string; success: string }>;
   // Over
-  type Session = { targets: { value: string; success: string }[] };
+  type Targets = { value: string; success: string }[];
   ```
