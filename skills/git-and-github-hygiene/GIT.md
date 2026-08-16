@@ -16,7 +16,7 @@ That PR's diff is then the curated keep, and whatever stays behind on the branch
 ## Prototype variants stay out of the feature commit
 
 A throwaway branch for the variants is fine.
-What must not happen is prototype files riding along into the feature commit. Check `git status` before committing, since anything sitting in the index goes with it.
+Prototype files must not ride along into the feature commit. Check `git status` before committing, since anything sitting in the index goes with it.
 
 The winning decision is what gets folded into the real code.
 

@@ -2,9 +2,7 @@
 
 ## Exercise the real code under test
 
-Always use the actual production code being tested. E.g. when unit testing an HTTP
-endpoint, import and use the production code that creates the endpoint. Do not
-re-create the endpoint inside the test.
+Always use the actual production code being tested. E.g. when unit testing an HTTP endpoint, import and use the production code that creates the endpoint. Do not re-create the endpoint inside the test.
 
 ## One focus per test
 
