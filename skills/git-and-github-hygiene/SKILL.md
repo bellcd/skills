@@ -16,13 +16,16 @@ Load only the reference file relevant to the current task:
 Issues, pull requests, comments, and commit messages use role phrasing — "dev verified locally".
 Where a tag is genuinely needed, use the user's handle, e.g. `@bellcd`.
 
-## `gh pr edit` and `gh issue edit` break on a linked Projects board
+## `gh pr edit` breaks where Projects classic is deprecated
 
-In a repo with a GitHub Projects v2 board linked, both commands can fail on a `projectCards` GraphQL deprecation. They fail before touching the body, so the error says nothing about the edit you were making.
+`gh pr edit` requests the deprecated `projectCards` field and fails on it, before touching the body. The error names the deprecation and says nothing about the edit you were making, so it reads as unrelated.
 
 Fall back to the REST endpoint, which never goes near the project fields:
 
 ```bash
 gh api repos/{owner}/{repo}/pulls/<n> -X PATCH -f body="$(cat new.md)"
-gh api repos/{owner}/{repo}/issues/<n> -X PATCH -f body="$(cat new.md)"
 ```
+
+`gh issue edit --body-file` is unaffected and works. Verified live, both directions, rather than assumed from the PR behavior.
+
+Any command that asks for `projectCards` fails the same way. `gh pr view <n> --json projectCards` reproduces it as a pure read, which is the cheap way to check whether a given `gh` version still has the problem.
