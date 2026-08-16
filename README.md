@@ -38,6 +38,7 @@ That copy is not CLI-managed — `update` will never touch it — so it drifts. 
 
 ## Available skills
 
-| Skill                                    | Description                                                                                                |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [code-style](skills/code-style/SKILL.md) | Christian Bell's coding conventions. Use when writing, editing, installing, or reviewing code of any kind. |
+| Skill                                                                  | Description                                                                                                                                                     |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [code-style](skills/code-style/SKILL.md)                               | Christian Bell's coding conventions. Use when writing, editing, installing, or reviewing code of any kind.                                                     |
+| [git-and-github-hygiene](skills/git-and-github-hygiene/SKILL.md)       | Christian Bell's conventions for branching, committing, pushing, pull requests, and GitHub issues. Use when committing, opening or updating a PR, or creating, editing, or closing an issue. |
