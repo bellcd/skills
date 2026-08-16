@@ -12,3 +12,6 @@ These rules apply to both JavaScript and TypeScript files.
 - Dependencies come first in source order.
 - Name boolean-returning pure functions `isFoo`.
 - When a function takes an object of named keys, name that parameter `params`. Avoid destructuring in the function signature.
+- Never take a bare argument whose meaning is unclear at the call site. Either rename the function so the argument's meaning is obvious, or take a `params` object with named properties.
+- Prefer `for...of` loops over `.forEach()`.
+- Take a trailing subarray with an explicit non-negative start index: `items.slice(items.length - n)`, never `items.slice(-n)`.
