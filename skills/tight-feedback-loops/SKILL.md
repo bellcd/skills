@@ -1,6 +1,6 @@
 ---
 name: tight-feedback-loops
-description: Conventions for scoping work into slices, verifying it, and handing back results. Use when planning a chunk of work, running tests to verify it, or reporting a result.
+description: Use when planning a chunk of work, verifying it with tests, or reporting a result.
 ---
 
 # Tight Feedback Loops
@@ -12,14 +12,14 @@ Small slices, the smallest test scope that answers the question, evidence before
 
 Feature work ships as tracer bullets, ~never as one wide diff.
 
-The first slice is the route plus the shell of the views — where the components will go.
+The first slice is the route plus the shell of the views, where the components will go.
 Then one hard or risky part on its own. Then the rest, piece by piece.
 Starting with the hardest part is fine, and often better.
 
 Aim for a few hundred lines per slice, less for a shell.
 When work is already built too wide, slice the existing files into sequential commits rather than presenting one large diff.
 
-The house mechanism is the mattpocock plugin skills — `/implement`, which calls `/tdd` for vertical slices, and `/to-tickets` for tracer-bullet tickets.
+The house mechanism is the mattpocock plugin skills: `/implement`, which calls `/tdd` for vertical slices, and `/to-tickets` for tracer-bullet tickets.
 They are user-invoked and won't self-fire: when told to start implementation work without one, suggest it, or follow the discipline anyway.
 
 ## Delete the superseded path
@@ -33,14 +33,14 @@ Name the incidental cruft the deletion also removes. It strengthens the case, an
 
 ## Verify before asserting
 
-Before claiming how code behaves — especially under failure or misuse — read the implementation.
+Before claiming how code behaves, especially under failure or misuse, read the implementation.
 Don't only reason from first principles when the configuration is observable.
 
 Find the knob that actually decides the behavior, then quote it.
 
 ## Run the smallest scope that answers the question
 
-While diagnosing, run the fewest tests that resolve the current question — e.g. a single spec file, a single directory, explicit worker count. Not the full suite.
+While diagnosing, run the fewest tests that resolve the current question, e.g. a single spec file, a single directory, explicit worker count. Not the full suite.
 
 Escalate scope and concurrency one variable at a time.
 

@@ -1,6 +1,6 @@
 ---
 name: driving-chrome
-description: Two Chrome extension behaviors that abort a batch or blank a result. Use before driving the browser extension, especially before a multi-step batch.
+description: Use before driving the browser extension, especially before a multi-step batch.
 ---
 
 # Driving Chrome

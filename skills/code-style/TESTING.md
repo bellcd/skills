@@ -2,13 +2,11 @@
 
 ## Exercise the real code under test
 
-Always use the actual production code being tested. E.g. when unit testing an HTTP
-endpoint, import and use the production code that creates the endpoint — do not
-re-create the endpoint inside the test.
+Always use the actual production code being tested. E.g. when unit testing an HTTP endpoint, import and use the production code that creates the endpoint. Do not re-create the endpoint inside the test.
 
 ## One focus per test
 
-Each test should assert roughly one piece of functionality — the piece its title names.
+Each test should assert roughly one piece of functionality, the piece its title names.
 For UI with many moving parts (e.g. 10 fields arranged in various ways):
 
 - One test can verify everything is present (if it should be).
@@ -50,7 +48,7 @@ A field that can't be pinned exactly takes an `expect.any()` / `expect.stringCon
 
 ## No loops in test bodies
 
-Spell each case out as its own assertion line, even when that repeats the matcher and the expected value. The repetition is the point — each line reads on its own.
+Spell each case out as its own assertion line, even when that repeats the matcher and the expected value. The repetition is the point. Each line reads on its own.
 
 ## Assert what your own code controls
 
@@ -68,34 +66,12 @@ Fixture data that assertions depend on belongs in the test file. A reader should
 
 Ideally test data is defined inside the test itself. But duplication and readability are real concerns.
 
-Playwright component-test story files exist only because a spec can't define React components inline. Keep them as minimal harnesses holding wrapper state, and pass all data as serializable props from the spec.
-
 Name spec-local helpers without the word "fixture".
 
 ## `.only`
 
 Never remove `.only` from tests. It is added deliberately as a quick way to isolate a
 particular test while iterating.
-
-## Playwright
-
-- Page object methods should return `Locator`s, so test cases can use the flakiness-resistant pattern of asserting in the test itself:
-
-  ```ts
-  // page object
-  get saveButton(): Locator {
-    return this.page.getByRole('button', { name: 'Save' });
-  }
-
-  // test
-  await expect(checkoutPage.saveButton).toBeEnabled();
-  ```
-
-- Assert against the DOM with `expect` matchers that check concrete state, e.g. that a particular element has particular text.
-- Skip explicit visibility checks — many Playwright methods perform them automatically.
-- When a component renders labeled sections, give its page object one named getter per section. Derive each locator from the visible label so the label's presence is asserted too, then prefer `toHaveText` (including the array form for lists).
-- A page-object parameter that addresses content takes the user-visible value, e.g. `card('Shared Attention')`. Name it for what it is.
-- When one test legitimately needs longer than the global timeout, give it a single `test.setTimeout(N)`. Don't stack competing per-assertion timeout(s), and don't raise the global timeout. An assertion that would otherwise impose its own takes `{ timeout: 0 }` so it inherits the test's number rather than competing with it, leaving one tunable number per test. Add a `// TODO:` or `// NOTE:` to fix or explain the underlying slowness and the override.
 
 ## Regex
 

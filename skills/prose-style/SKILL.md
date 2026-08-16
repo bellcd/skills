@@ -1,6 +1,6 @@
 ---
 name: prose-style
-description: Conventions for prose. Use when writing or editing prose of any kind.
+description: Use when writing or editing prose of any kind.
 ---
 
 # Prose Style

@@ -1,6 +1,6 @@
 ---
 name: ag-grid
-description: Conventions for AG Grid column definitions, cell styling, and addressing a grid from tests. Use when working with AG Grid.
+description: Use when working with AG Grid.
 ---
 
 # AG Grid

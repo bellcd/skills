@@ -5,7 +5,7 @@ These rules apply to both JavaScript and TypeScript files.
 - Single quotes in JS/TS files.
 - Always use native ES modules, never CommonJS.
 - Prefer `??` over `||`
-- Prefer if-else and similar flow-control statements when possible.
+- Prefer if-else and similar flow-control statements, especially over nested ternaries, `&&` chains, and other dense conditional logic. Explicit is generally preferred, subject to engineering taste.
 - Use object shorthand: `{ foo }`, not `{ foo: foo }`.
 - The `await` keyword goes on its own line, not inline in expressions.
 - Imports go at the top of the file. Only `@fileoverview` comments may come before them.

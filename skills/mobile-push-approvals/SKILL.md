@@ -1,6 +1,6 @@
 ---
 name: mobile-push-approvals
-description: Reading a "not sent" push result correctly. Use when a push notification reports not sent, mobile approvals look broken, or Christian says he is stepping away.
+description: Use when a push notification reports not sent, mobile approvals look broken, or Christian says he is stepping away.
 ---
 
 # Mobile Push Approvals

@@ -1,6 +1,6 @@
 ---
 name: db-normalization
-description: Normal forms as the working vocabulary for table design. Use when designing a table, reviewing a migration, or arguing a schema decision.
+description: Use when designing a table, reviewing a migration, or arguing a schema decision.
 ---
 
 # Database Normalization

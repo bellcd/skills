@@ -1,6 +1,6 @@
 ---
 name: skills-maintenance
-description: How a personal skill is edited, refreshed on this machine, and refreshed in a repo that vendors a copy. Use when changing a skill, or after merging a change to the skills repo.
+description: Use when changing a skill, or after merging a change to the skills repo.
 ---
 
 # Maintaining the skills
@@ -22,6 +22,16 @@ npx skills update <name> -g
 ```
 
 Run it once per changed skill. It reads the source repo from the skill itself, so no lockfile is involved and no path argument is needed. It reports what it updated, and reports finding nothing when the copy is already current.
+
+A **new** skill is not installed yet, so `update` has nothing to update. Install it instead, and several at once if you like:
+
+```bash
+npx skills add bellcd/skills --skill <name> --skill <name> -g
+```
+
+Both commands exit successfully, which is what makes this worth knowing. Reading `update`'s "nothing to update" as "already current" leaves the skill uninstalled while looking like a clean refresh. `ls ~/.agents/skills/` is the check that it landed.
+
+`add` installs for every agent target it knows about, and prints a failure line for any target that does not support global installs. Those lines are expected and do not mean the install failed.
 
 ## A repo's vendored copy
 
