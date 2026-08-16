@@ -26,8 +26,10 @@ Every slice stays uncommitted until Christian has reviewed the working-tree diff
 "Separate commits" means separate review-then-commit cycles, not committing slice by slice unprompted.
 Build the slice, leave it uncommitted, say it's ready for review, wait. Commit on the go-ahead, then start the next slice.
 
+This holds in every repository, the skills repo and any personal checkout included. The rule is about the review happening, not about which project the work sits in.
+
 A go-ahead covers the slice it was given for.
-A fix discovered afterwards, e.g. during live verification, does not inherit it.
+It does not extend to a second repository touched in the same turn, and a fix discovered afterwards, e.g. during live verification, does not inherit it.
 Leave that fix in the working tree, hand over the re-verification commands, and commit only once the check has passed.
 
 ## Review the change before presenting it
