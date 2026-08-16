@@ -31,3 +31,7 @@ gh api repos/{owner}/{repo}/pulls/<n> -X PATCH -f body="$(cat new.md)"
 `gh issue edit --body-file` is unaffected and works. Verified live, both directions, rather than assumed from the PR behavior.
 
 Any command that asks for `projectCards` fails the same way. `gh pr view <n> --json projectCards` reproduces it as a pure read, which is the cheap way to check whether a given `gh` version still has the problem.
+
+<!-- TODO: rerun that pure-read check against the current gh. Once it stops failing, delete this
+     whole section rather than leaving the workaround as sediment. -->
+
