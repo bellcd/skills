@@ -15,3 +15,14 @@ Load only the reference file relevant to the current task:
 
 Issues, pull requests, comments, and commit messages use role phrasing — "dev verified locally".
 Where a tag is genuinely needed, use the user's handle, e.g. `@bellcd`.
+
+## `gh pr edit` and `gh issue edit` break on a linked Projects board
+
+In a repo with a GitHub Projects v2 board linked, both commands can fail on a `projectCards` GraphQL deprecation. They fail before touching the body, so the error says nothing about the edit you were making.
+
+Fall back to the REST endpoint, which never goes near the project fields:
+
+```bash
+gh api repos/{owner}/{repo}/pulls/<n> -X PATCH -f body="$(cat new.md)"
+gh api repos/{owner}/{repo}/issues/<n> -X PATCH -f body="$(cat new.md)"
+```
