@@ -42,7 +42,7 @@ expect(span.sessionIndex).toBe(0);
 expect(span.sourceText).toContain('given somewhat');
 ```
 
-Keep two assertions rather than downgrade an exact `toEqual` to a subset match. Exactness on a small type beats one fewer assertion.
+A field that can't be pinned exactly takes an `expect.any()` / `expect.stringContaining()` matcher inside the whole-object assertion, rather than a downgrade to a subset match. Enough of those matchers eventually costs more readability than the exactness buys. But nearly always the whole-object `toEqual` / `toMatchObject` still wins over asserting on particular properties.
 
 `toMatchObject` subset-matches an object, but it pins array length and order. Collapsing a run of per-element assertions into one whole-array `toMatchObject` silently adds ordering coverage.
 
