@@ -15,6 +15,7 @@ Load only the reference files relevant to the current task:
 - [REACT.md](REACT.md)
 - [NPM.md](NPM.md)
 - [TESTING.md](TESTING.md)
+- [PLAYWRIGHT.md](PLAYWRIGHT.md)
 
 ## Security (always applies)
 
