@@ -7,13 +7,13 @@ description: Use when branching, committing, pushing, opening or updating a PR, 
 
 Load only the reference file relevant to the current task:
 
-- [GIT.md](GIT.md) — branches, commits, pushes
+- [GIT.md](GIT.md): branches, commits, pushes
 - [PULL-REQUESTS.md](PULL-REQUESTS.md)
 - [ISSUES.md](ISSUES.md)
 
 ## Never use the user's name in GitHub artifacts
 
-Issues, pull requests, comments, and commit messages use role phrasing — "dev verified locally".
+Issues, pull requests, comments, and commit messages use role phrasing, e.g. "dev verified locally".
 Where a tag is genuinely needed, use the user's handle, e.g. `@bellcd`.
 
 This covers issue drafts written as repo files. They become the issue body verbatim, so the name has to be gone by the time the draft is approved, not by the time it is posted.

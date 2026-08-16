@@ -16,18 +16,18 @@ That PR's diff is then the curated keep, and whatever stays behind on the branch
 ## Prototype variants stay out of the feature commit
 
 A throwaway branch for the variants is fine.
-What must not happen is prototype files riding along into the feature commit — check `git status` before committing, since anything sitting in the index goes with it.
+What must not happen is prototype files riding along into the feature commit. Check `git status` before committing, since anything sitting in the index goes with it.
 
 The winning decision is what gets folded into the real code.
 
 ## Commits wait for an explicit go-ahead
 
 Every slice stays uncommitted until Christian has reviewed the working-tree diff and said to commit.
-"Separate commits" means separate review-then-commit cycles — not committing slice by slice unprompted.
+"Separate commits" means separate review-then-commit cycles, not committing slice by slice unprompted.
 Build the slice, leave it uncommitted, say it's ready for review, wait. Commit on the go-ahead, then start the next slice.
 
 A go-ahead covers the slice it was given for.
-A fix discovered afterwards — e.g. during live verification — does not inherit it.
+A fix discovered afterwards, e.g. during live verification, does not inherit it.
 Leave that fix in the working tree, hand over the re-verification commands, and commit only once the check has passed.
 
 ## Review the change before presenting it
@@ -38,7 +38,7 @@ This is the default for every change, with exceptions, rather than something res
 Report the findings alongside the change, including the ones deliberately not acted on and why.
 
 Christian's review time is the scarce resource.
-Defects a review would have caught shouldn't be spent on a human — arriving with the review already done makes his pass about judgment rather than defect-hunting.
+Defects a review would have caught shouldn't be spent on a human. Arriving with the review already done makes his pass about judgment rather than defect-hunting.
 
 ## Green precedes the commit, not just the pull request
 
@@ -47,15 +47,15 @@ Don't commit staged infra work and verify afterwards. Stage everything, hand ove
 
 The acceptance bar differs by the kind of work:
 
-- **Implementation or migration** — the entire local end-to-end suite green, accounting for every provider the suite exercises.
-- **Spike** — a single representative outcome, e.g. one end-to-end test passing through the new path. Spikes stay cheap.
+- **Implementation or migration**: the entire local end-to-end suite green, accounting for every provider the suite exercises.
+- **Spike**: a single representative outcome, e.g. one end-to-end test passing through the new path. Spikes stay cheap.
 
 ## Push once, when the branch is review-ready
 
 Every push to a pull-request branch can trigger CI, and CI minutes might be constrained.
 Accumulate commits locally and push once, rather than pushing per commit. Before any push confirm it's wanted now or clearly necessary.
 
-Run the local verification — unit tests, type-check, lint — before pushing, so a push isn't spent discovering red CI.
+Run the local verification before pushing: unit tests, type-check, lint. A push shouldn't be spent discovering red CI.
 
 While Christian is actively reviewing a branch, don't push at all.
 Batch the local work and push once he says the review is done.

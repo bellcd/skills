@@ -5,11 +5,11 @@ description: Use when writing or reviewing code of any kind, or installing a pac
 
 # Code Style
 
-Rules phrased "in general" or "prefer" are strong defaults — deviate only for a specific reason and point out why to the user.
+Rules phrased "in general" or "prefer" are strong defaults. Deviate only for a specific reason, and point out why to the user.
 
 Load only the reference files relevant to the current task:
 
-- [GENERAL.md](GENERAL.md) — applies to all languages
+- [GENERAL.md](GENERAL.md): applies to all languages
 - [JAVASCRIPT.md](JAVASCRIPT.md)
 - [TYPESCRIPT.md](TYPESCRIPT.md)
 - [REACT.md](REACT.md)
@@ -19,4 +19,4 @@ Load only the reference files relevant to the current task:
 ## Security (always applies)
 
 - Never read unencrypted `.env` files. When you need a value, ask for it, or trace the variable's usage through code, CI config, and `config.toml` instead.
-- Avoid logging HTTP request/response headers — they often contain secrets.
+- Avoid logging HTTP request/response headers. They often contain secrets.
