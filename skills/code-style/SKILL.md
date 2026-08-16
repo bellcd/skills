@@ -1,6 +1,6 @@
 ---
 name: code-style
-description: Christian Bell's coding conventions. Use when writing, editing, installing, or reviewing code of any kind.
+description: Coding conventions. Use when writing, editing, installing, or reviewing code of any kind.
 ---
 
 # Code Style
