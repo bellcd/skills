@@ -1,6 +1,6 @@
 ---
 name: fetching-web-sources
-description: Getting a web source that resists. Use when a fetch is refused or comes back empty, a PDF yields no text, or a page sits behind a login.
+description: Use when a fetch is refused or comes back empty, a PDF yields no text, or a page sits behind a login.
 ---
 
 # Fetching Web Sources

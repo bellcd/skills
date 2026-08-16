@@ -1,6 +1,6 @@
 ---
 name: git-and-github-hygiene
-description: Conventions for branching, committing, pushing, pull requests, and GitHub issues. Use when committing, opening or updating a PR, or creating, editing, or closing an issue.
+description: Use when branching, committing, pushing, opening or updating a PR, or creating, editing, or closing an issue.
 ---
 
 # Git and GitHub Hygiene

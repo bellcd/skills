@@ -1,6 +1,6 @@
 ---
 name: posthog
-description: Conventions for PostHog session recording and replay masking. Use when working with PostHog.
+description: Use when working with PostHog.
 ---
 
 # PostHog

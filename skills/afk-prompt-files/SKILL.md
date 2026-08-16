@@ -1,6 +1,6 @@
 ---
 name: afk-prompt-files
-description: Workflow steps a headless prompt file has to spell out. Use when writing or editing an AFK prompt.
+description: Use when writing or editing an AFK prompt.
 ---
 
 # AFK Prompt Files

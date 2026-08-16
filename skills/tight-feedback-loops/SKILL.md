@@ -1,6 +1,6 @@
 ---
 name: tight-feedback-loops
-description: Conventions for scoping work into slices, verifying it, and handing back results. Use when planning a chunk of work, running tests to verify it, or reporting a result.
+description: Use when planning a chunk of work, verifying it with tests, or reporting a result.
 ---
 
 # Tight Feedback Loops

@@ -1,6 +1,6 @@
 ---
 name: skills-maintenance
-description: How a personal skill is edited, refreshed on this machine, and refreshed in a repo that vendors a copy. Use when changing a skill, or after merging a change to the skills repo.
+description: Use when changing a skill, or after merging a change to the skills repo.
 ---
 
 # Maintaining the skills

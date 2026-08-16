@@ -1,6 +1,6 @@
 ---
 name: code-style
-description: Coding conventions. Use when writing, editing, installing, or reviewing code of any kind.
+description: Use when writing or reviewing code of any kind, or installing a package.
 ---
 
 # Code Style
