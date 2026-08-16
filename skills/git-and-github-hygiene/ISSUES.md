@@ -15,6 +15,8 @@ For a batch, show every draft before posting any of them.
 Ask whether the issue belongs on a GitHub Project as part of that approval question.
 `gh project list --owner <org>` for the candidates, `gh project item-add <number> --owner <org> --url <issue-url>` to place it.
 
+Project commands need a scope the default login does not carry. `gh auth refresh -s project` once, or every call fails on permissions rather than on anything to do with the project.
+
 ## Editing a published issue
 
 Fetch the current text to a local file, apply the change locally, and show the diff.
@@ -62,5 +64,15 @@ An estimate is fine — a rough number beats no number.
 Reconstruct from local Claude Code session transcripts when the work is recent.
 Sum the gaps between consecutive transcript events inside the work's window, capping any gap over 15 minutes.
 Otherwise estimate from the wall-clock span and say that's what it is.
+
+Keep only the sessions whose subject matter is the issue, judged from their opening prompts. Matching on the issue number alone over-counts badly, since a number can be named in passing by any session.
+
+An AFK run is invisible to this method, because its transcript lives on the sandbox VM rather than locally. What the figure measures is host-side dispatch and review time, so a realized-against-budget comparison is human hours against human-plus-agent output.
+
+<!-- TODO: nothing surfaces that gap at the point of reading. A `## Time spent` figure looks
+     like total effort, and silently is not, so the more AFK work an issue carried the more it
+     understates. Options: pull the VM transcripts back to the host and fold them in, label the
+     figure in the issue body as host-side only, or state the gap when reporting a number that
+     covers AFK work. Pick one rather than leaving the reader to know this. -->
 
 A body section, not a comment and not a project field.
