@@ -38,3 +38,5 @@ Mount props reach the browser through JSON serialization, so only serializable v
 One `mount()` per test. To exercise a prop change, call `component.update()` rather than mounting a second time.
 
 When a build fails on an unresolved import that plainly exists, delete `playwright/.cache` and re-run.
+
+Prepend `PW_TEST_HTML_REPORT_OPEN=never` to any non-interactive run. On a failure the HTML reporter otherwise blocks while serving the report, and the run looks like it has hung.
