@@ -2,6 +2,10 @@
 
 These rules apply to code in any language.
 
+They apply to new code and to code already being edited. In general, older code that predates a rule is not a pattern to copy.
+Sweep pre-existing violations in the file(s) being touched. How wide to go with a sweep depends on how much it increases scope, often a user-level decision.
+Prefer fixing violations in their own commits. I.e. "make the change easy, then make the easy change"
+
 - Prefer creation functions over shared constants for non-primitive values. A shared object constant is one value aliased everywhere — a mutation in one consumer leaks to all of them. A creation function hands every caller a fresh value and provides a natural seam for parameters later. Module-level regex constants are exempt, but flag the `lastIndex` hazard if `.test()` or `.exec()` enters the picture.
 - Prefer required parameters. Optional and default parameters should be used very sparingly, if at all.
 - Factor numeric time constants into conventional units, e.g. `24 * 60 * 60 * 1000`, not `86400 * 1000`.

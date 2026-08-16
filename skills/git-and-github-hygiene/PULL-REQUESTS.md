@@ -15,3 +15,5 @@ Use a closing keyword (`Closes #n`) only when every acceptance criterion is veri
 
 When the fix can only be confirmed _after_ it merges — reference the issue non-closingly instead: `(#n)` in the subject, `Refs #n` in the body.
 Add a short Verification section saying how and when confirmation happens, and leave the issue open for the user to close once it does.
+
+A workflow change is the standard case. A `repository_dispatch` workflow runs from the default branch's copy of itself, so the pull request's own run exercises the old version and proves nothing about the change.

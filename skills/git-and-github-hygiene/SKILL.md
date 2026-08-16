@@ -16,6 +16,8 @@ Load only the reference file relevant to the current task:
 Issues, pull requests, comments, and commit messages use role phrasing — "dev verified locally".
 Where a tag is genuinely needed, use the user's handle, e.g. `@bellcd`.
 
+This covers issue drafts written as repo files. They become the issue body verbatim, so the name has to be gone by the time the draft is approved, not by the time it is posted.
+
 ## `gh pr edit` breaks where Projects classic is deprecated
 
 `gh pr edit` requests the deprecated `projectCards` field and fails on it, before touching the body. The error names the deprecation and says nothing about the edit you were making, so it reads as unrelated.
