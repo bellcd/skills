@@ -32,3 +32,9 @@ Add a `// TODO:` or `// NOTE:` to fix or explain the underlying slowness and the
 ## Component tests
 
 Story files exist only because a spec can't define React components inline. Keep them as minimal harnesses holding wrapper state, and pass all data as serializable props from the spec.
+
+Mount props reach the browser through JSON serialization, so only serializable values survive. A function, a class instance, or a date arrives as something else, or not at all.
+
+One `mount()` per test. To exercise a prop change, call `component.update()` rather than mounting a second time.
+
+When a build fails on an unresolved import that plainly exists, delete `playwright/.cache` and re-run.
