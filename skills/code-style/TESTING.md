@@ -46,7 +46,7 @@ A field that can't be pinned exactly takes an `expect.any()` / `expect.stringCon
 
 `toMatchObject` subset-matches an object, but it pins array length and order. Collapsing a run of per-element assertions into one whole-array `toMatchObject` silently adds ordering coverage.
 
-It also treats an expected property explicitly set to `undefined` as a requirement that the key be present, so it fails where `toEqual` passes. Reach for that deliberately or not at all.
+`toMatchObject` also treats an expected property explicitly set to `undefined` as a requirement that the key be present. Reach for that deliberately or not at all.
 
 ## No loops in test bodies
 

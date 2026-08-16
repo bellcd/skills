@@ -29,9 +29,7 @@ Default to the concept rather than the pointer. E.g. write "the read seam", not 
 
 Keep a pointer where the reader genuinely needs to navigate there, such as the Refs section of an issue that gates on another issue.
 
-When a pointer does earn its place in prose, name what it points at: e.g. `Group-by-goal view (#492)`, never a bare `#492`.
-
-Not number-first either. `#492 Group-by-goal view` makes a long title collide with the surrounding grammar, where the trailing parenthetical stays out of the sentence's way. A table whose row key is the number is a different thing and keeps it in front.
+When a pointer does earn its place in prose, name what it points at: e.g. `Group-by-goal view (#492)`, never a bare `#492` or different format like `#492 Group-by-goal view`
 
 A date that genuinely needs recording belongs in a structured home, like a revision-history table or a decision log.
 
