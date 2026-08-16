@@ -18,5 +18,5 @@ Load only the reference files relevant to the current task:
 
 ## Security (always applies)
 
-- Never read unencrypted `.env` files.
+- Never read unencrypted `.env` files. When you need a value, ask for it, or trace the variable's usage through code, CI config, and `config.toml` instead.
 - Avoid logging HTTP request/response headers — they often contain secrets.
