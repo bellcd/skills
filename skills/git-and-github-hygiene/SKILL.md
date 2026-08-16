@@ -1,6 +1,6 @@
 ---
 name: git-and-github-hygiene
-description: Christian Bell's conventions for branching, committing, pushing, pull requests, and GitHub issues. Use when committing, opening or updating a PR, or creating, editing, or closing an issue.
+description: Conventions for branching, committing, pushing, pull requests, and GitHub issues. Use when committing, opening or updating a PR, or creating, editing, or closing an issue.
 ---
 
 # Git and GitHub Hygiene
