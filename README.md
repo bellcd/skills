@@ -38,7 +38,9 @@ That copy is not CLI-managed — `update` will never touch it — so it drifts. 
 
 ## Available skills
 
+- [ag-grid](skills/ag-grid/SKILL.md)
 - [code-style](skills/code-style/SKILL.md)
 - [git-and-github-hygiene](skills/git-and-github-hygiene/SKILL.md)
+- [posthog](skills/posthog/SKILL.md)
 - [prose-style](skills/prose-style/SKILL.md)
 - [tight-feedback-loops](skills/tight-feedback-loops/SKILL.md)
