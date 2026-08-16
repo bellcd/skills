@@ -42,9 +42,33 @@ expect(span.sessionIndex).toBe(0);
 expect(span.sourceText).toContain('given somewhat');
 ```
 
+A field that can't be pinned exactly takes an `expect.any()` / `expect.stringContaining()` matcher inside the whole-object assertion, rather than a downgrade to a subset match. Enough of those matchers eventually costs more readability than the exactness buys. But nearly always the whole-object `toEqual` / `toMatchObject` still wins over asserting on particular properties.
+
+`toMatchObject` subset-matches an object, but it pins array length and order. Collapsing a run of per-element assertions into one whole-array `toMatchObject` silently adds ordering coverage.
+
+## No loops in test bodies
+
+Spell each case out as its own assertion line, even when that repeats the matcher and the expected value. The repetition is the point — each line reads on its own.
+
+## Assert what your own code controls
+
+Prefer signals your own code decides: the branch taken, a redirect path, literals in a JSON body, a header your code sets. Avoid framework-internal protocol details, which can shift in a version bump and silently invalidate the test.
+
+Before asserting on a value, ask whose code sets it. If the framework sets it, look for an app-controlled formulation of the same outcome. If the behavior is only observable through framework encodings at unit scope, move that pin to an integration or end-to-end seam.
+
 ## Incidental data
 
 Data or choices that the test requires but that aren't part of the logic under test should be randomized or defaulted.
+
+## Test data lives beside the assertions
+
+Fixture data that assertions depend on belongs in the test file. A reader should see where every asserted value comes from without opening another file.
+
+Ideally test data is defined inside the test itself. But duplication and readability are real concerns.
+
+Playwright component-test story files exist only because a spec can't define React components inline. Keep them as minimal harnesses holding wrapper state, and pass all data as serializable props from the spec.
+
+Name spec-local helpers without the word "fixture".
 
 ## `.only`
 
@@ -67,6 +91,9 @@ particular test while iterating.
 
 - Assert against the DOM with `expect` matchers that check concrete state, e.g. that a particular element has particular text.
 - Skip explicit visibility checks — many Playwright methods perform them automatically.
+- When a component renders labeled sections, give its page object one named getter per section. Derive each locator from the visible label so the label's presence is asserted too, then prefer `toHaveText` (including the array form for lists).
+- A page-object parameter that addresses content takes the user-visible value, e.g. `card('Shared Attention')`. Name it for what it is.
+- When one test legitimately needs longer than the global timeout, give it a single `test.setTimeout(N)`. Don't stack competing per-assertion timeout(s), and don't raise the global timeout. Add a `// TODO:` or `// NOTE:` to fix or explain the underlying slowness and the override.
 
 ## Regex
 
