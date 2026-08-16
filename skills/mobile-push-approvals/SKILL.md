@@ -21,6 +21,6 @@ Earlier sessions took a skipped notification and that banner together as proof o
 
 When he says he is stepping away, fire the work and let a genuine approval prompt or question block on him. That is the only probe that carries information.
 
-## `remoteControlAtStartup` is user scope
+## `remoteControlAtStartup` goes in user settings
 
-The CLI rejects that key from project and local settings files.
+It is set in `~/.claude/settings.json`. Whether project or local settings would also be honored is untested, and the settings schema does not say either way.
