@@ -21,4 +21,4 @@ Prefer fixing violations in their own commits. I.e. "make the change easy, then 
 - Avoid comments that restate what the code already does (e.g. repeating a function's name).
 - Comments that explain a design choice or a non-obvious constraint start with `// NOTE:`.
 - TODOs in code are a single terse line pointing at deferred work, e.g. `// TODO(#420): add tests`. Rationale belongs in a `NOTE:` comment beside it, not in the TODO. Outside code, in markdown or another prose file with no `NOTE:` convention to hold it, a TODO carries its own rationale rather than shedding it.
-- Break comment lines where the sentence naturally pauses, at clause and phrase boundaries. Do this even when that makes lines noticeably shorter or longer than the usual wrap width. Formatters don't reflow comments, so the author's breaks are what the reader gets.
+- Break comment lines where the sentence naturally pauses, at clause and phrase boundaries. Do this even when that makes lines noticeably shorter or longer than the usual wrap width. The same holds for prose in markdown and other documentation files. Wrap to the project's configured `printWidth`.
