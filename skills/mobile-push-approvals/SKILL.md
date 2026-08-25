@@ -1,11 +1,11 @@
 ---
 name: mobile-push-approvals
-description: Use when a push notification reports not sent, mobile approvals look broken, or Christian says he is stepping away.
+description: Use when a push notification reports not sent, mobile approvals look broken, or the user says they are stepping away.
 ---
 
 # Mobile Push Approvals
 
-Approval prompts and questions do reach Christian's phone, and he answers them from there. Treat delivery as working.
+Approval prompts and questions do reach the user's phone, and they answer them from there. Treat delivery as working.
 
 ## "Not sent" is deduplication
 

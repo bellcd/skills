@@ -9,7 +9,7 @@ description: Use when changing a skill, or after merging a change to the skills 
 
 `bellcd/skills` is the source. Every other copy on disk is downstream of it, and editing one in place either loses the edit at the next refresh or diverges invisibly.
 
-Branch the upstream checkout at `~/skills`, change `skills/<name>/`, open a pull request, and let Christian merge it. Only then refresh the copies.
+Branch the upstream checkout at `~/skills`, change `skills/<name>/`, open a pull request, and let the user merge it. Only then refresh the copies.
 
 Two kinds of copy exist and they refresh differently.
 
