@@ -40,7 +40,7 @@ This is the default for every change, with exceptions, rather than something res
 Report the findings alongside the change, including the ones deliberately not acted on and why.
 
 The user's review time is the scarce resource.
-Defects a review would have caught shouldn't be spent on a human. Arriving with the review already done makes his pass about judgment rather than defect-hunting.
+Defects a review would have caught shouldn't be spent on a human. Arriving with the review already done makes their pass about judgment rather than defect-hunting.
 
 ## Green precedes the commit, not just the pull request
 
@@ -60,4 +60,4 @@ Accumulate commits locally and push once, rather than pushing per commit. Before
 Run the local verification before pushing: unit tests, type-check, lint. A push shouldn't be spent discovering red CI.
 
 While the user is actively reviewing a branch, don't push at all.
-Batch the local work and push once he says the review is done.
+Batch the local work and push once they say the review is done.

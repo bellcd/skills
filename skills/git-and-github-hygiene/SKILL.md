@@ -16,13 +16,11 @@ Load only the reference file relevant to the current task:
 Issues, pull requests, comments, and commit messages use role phrasing, e.g. "dev verified locally".
 Where a tag is genuinely needed, use the user's handle, e.g. `@bellcd`.
 
-The same holds for anything else that persists: repo documentation, `.claude/rules/`, agent-facing
-convention docs, and these skills. Write "the user" or name the role. A doc that names one person
-reads as a fact about them to everyone who is not them, and it is how a personal preference gets
-mistaken for a project rule.
+The same holds for anything that persists: repo docs, rules files, these skills. Write "the user" or
+name the role. Naming one person makes a personal preference read as a project rule.
 
-Sweep the pronouns too, not just the name. "priority is his field" and "he overrides that" carry the
-same reference by another route, and a find-and-replace on the name alone leaves them behind.
+Sweep the pronouns too. "priority is his field" and "he overrides that" carry the same reference, and
+a find-and-replace on the name leaves them behind.
 
 This covers issue drafts written as repo files. They become the issue body verbatim, so the name has to be gone by the time the draft is approved, not by the time it is posted.
 

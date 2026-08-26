@@ -23,7 +23,7 @@ Read it with the Read tool as page images, or run `pdftotext -layout`. Between t
 
 `drive.google.com` is too much of a security risk. No `WebFetch`, browser navigation, `curl`, etc.
 
-Treat a Drive-hosted document as unreachable and ask him for the content directly.
+Treat a Drive-hosted document as unreachable and ask the user for the content directly.
 
 ## A logged-out probe of a profile page proves nothing
 

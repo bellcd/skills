@@ -57,7 +57,7 @@ Use a fresh login shell, so profile changes the session's shell snapshot predate
 ## Hand over commands as one line
 
 A command given to the user is a single unbroken line.
-They copy and run it directly, so anything split costs them reassembly.
+They run it directly, so anything split costs reassembly.
 
 Absolute paths inline, one fenced block, one line.
 Don't wrap long paths onto continuation lines, don't split a `cd` off from the command it sets up, and don't offer the same command twice as competing variants.

@@ -13,12 +13,11 @@ Present the draft, wait for explicit approval, then post with `gh issue create -
 For a batch, show every draft before posting any of them.
 
 **Never use AskUserQuestion to approve content.** It swallows the prose written before it, so a draft
-presented in the same turn is invisible and the user is choosing blind. Approval goes in a plain
-final text message with the content inline. Reserve the question tool for scope, timing, or
-field-only choices where the options stand on their own.
+in the same turn is invisible and the choice is blind. Approval goes in a plain final text message
+with the content inline. Reserve the question tool for choices whose options stand on their own,
+like scope or timing.
 
-**Don't ask anyone to pick from a list they cannot see.** Offering three named batches of work is not
-a question until the raw material is on the table. Show the titles, then ask.
+The general rule: don't ask anyone to pick from a list they cannot see. Show the material, then ask.
 
 Ask whether the issue belongs on a GitHub Project as part of that approval question.
 `gh project list --owner <org>` for the candidates, `gh project item-add <number> --owner <org> --url <issue-url>` to place it.

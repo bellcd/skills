@@ -5,11 +5,11 @@ description: Use when a push notification reports not sent, mobile approvals loo
 
 # Mobile Push Approvals
 
-Approval prompts and questions do reach the user's phone, and they answer them from there. Treat delivery as working.
+Approval prompts and questions do reach the user's phone, and get answered there. Treat delivery as working.
 
 ## "Not sent" is deduplication
 
-`PushNotification` returns *"Not sent — this terminal is active"* whenever he is at the keyboard. That is the dedup rule firing, not a delivery failure and not a registration problem.
+`PushNotification` returns *"Not sent — this terminal is active"* whenever the user is at the keyboard. That is the dedup rule firing, not a delivery failure and not a registration problem.
 
 ## The registration banner is not evidence
 
@@ -17,9 +17,9 @@ The `⚠ No mobile registered` banner in `/config` has shown while push was in f
 
 Earlier sessions took a skipped notification and that banner together as proof of a broken device registration, and spent several sessions chasing a server-side handshake that was fine.
 
-## The probe is real work, run while he is away
+## The probe is real work, run while they are away
 
-When he says he is stepping away, fire the work and let a genuine approval prompt or question block on him. That is the only probe that carries information.
+When they say they are stepping away, fire the work and let a genuine approval prompt or question block on them. That is the only probe that carries information.
 
 ## `remoteControlAtStartup` goes in user settings
 
