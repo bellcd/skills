@@ -1,7 +1,7 @@
 # GitHub Issues
 
 Tracker content is canonical once posted and drives downstream work,
-so Christian reviews every issue mutation the way he reviews code.
+so the user reviews every issue mutation the way they review code.
 Nothing reaches the tracker unreviewed.
 
 ## Drafting a new issue
@@ -11,6 +11,13 @@ Edits during review rounds then show up as git diffs, instead of forcing a re-re
 
 Present the draft, wait for explicit approval, then post with `gh issue create --body-file`.
 For a batch, show every draft before posting any of them.
+
+**Never use AskUserQuestion to approve content.** It swallows the prose written before it, so a draft
+in the same turn is invisible and the choice is blind. Approval goes in a plain final text message
+with the content inline. Reserve the question tool for choices whose options stand on their own,
+like scope or timing.
+
+The general rule: don't ask anyone to pick from a list they cannot see. Show the material, then ask.
 
 Ask whether the issue belongs on a GitHub Project as part of that approval question.
 `gh project list --owner <org>` for the candidates, `gh project item-add <number> --owner <org> --url <issue-url>` to place it.
@@ -29,8 +36,8 @@ diff -u old.md new.md
 ```
 
 **Hand over the command as well as its output.** When a diff is between files outside the
-local repo, print the exact command Christian can run himself alongside the inline diff, using absolute paths.
-He re-runs these in his own pager. `git diff --no-index <a> <b>` for colour, `--word-diff` for prose edits.
+local repo, print the exact command the user can run themselves alongside the inline diff, using absolute paths.
+They re-run these in their own pager. `git diff --no-index <a> <b>` for colour, `--word-diff` for prose edits.
 
 ## Issues carry signal only
 

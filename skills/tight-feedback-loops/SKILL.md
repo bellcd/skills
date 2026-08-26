@@ -44,20 +44,20 @@ While diagnosing, run the fewest tests that resolve the current question, e.g. a
 
 Escalate scope and concurrency one variable at a time.
 
-A full-suite run is Christian's to launch, or needs asking first. That includes a run whose only purpose is confirmation.
+A full-suite run is the user's to launch, or needs asking first. That includes a run whose only purpose is confirmation.
 
 ## Final verification uses the plain commands
 
 Env prefixes and reporter flags are fine inside a diagnosis loop. The run that declares a suite green is the repo's bare script (e.g. npm script), with no decoration.
 
-The suite has to pass the way Christian and CI invoke it.
+The suite has to pass the way the user and CI invoke it.
 
 Use a fresh login shell, so profile changes the session's shell snapshot predates are picked up.
 
 ## Hand over commands as one line
 
-A command given to Christian is a single unbroken line.
-He copies and runs it directly, so anything split costs him reassembly.
+A command given to the user is a single unbroken line.
+They run it directly, so anything split costs reassembly.
 
 Absolute paths inline, one fenced block, one line.
 Don't wrap long paths onto continuation lines, don't split a `cd` off from the command it sets up, and don't offer the same command twice as competing variants.

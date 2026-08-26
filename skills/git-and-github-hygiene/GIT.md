@@ -22,7 +22,7 @@ The winning decision is what gets folded into the real code.
 
 ## Commits wait for an explicit go-ahead
 
-Every slice stays uncommitted until Christian has reviewed the working-tree diff and said to commit.
+Every slice stays uncommitted until the user has reviewed the working-tree diff and said to commit.
 "Separate commits" means separate review-then-commit cycles, not committing slice by slice unprompted.
 Build the slice, leave it uncommitted, say it's ready for review, wait. Commit on the go-ahead, then start the next slice.
 
@@ -39,8 +39,8 @@ This is the default for every change, with exceptions, rather than something res
 
 Report the findings alongside the change, including the ones deliberately not acted on and why.
 
-Christian's review time is the scarce resource.
-Defects a review would have caught shouldn't be spent on a human. Arriving with the review already done makes his pass about judgment rather than defect-hunting.
+The user's review time is the scarce resource.
+Defects a review would have caught shouldn't be spent on a human. Arriving with the review already done makes their pass about judgment rather than defect-hunting.
 
 ## Green precedes the commit, not just the pull request
 
@@ -59,5 +59,5 @@ Accumulate commits locally and push once, rather than pushing per commit. Before
 
 Run the local verification before pushing: unit tests, type-check, lint. A push shouldn't be spent discovering red CI.
 
-While Christian is actively reviewing a branch, don't push at all.
-Batch the local work and push once he says the review is done.
+While the user is actively reviewing a branch, don't push at all.
+Batch the local work and push once they say the review is done.
