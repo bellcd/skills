@@ -38,6 +38,13 @@ Don't only reason from first principles when the configuration is observable.
 
 Find the knob that actually decides the behavior, then quote it.
 
+A metric can exclude the very thing you are checking, so a good number is not yet a verified claim.
+Read what a metric leaves out before quoting it as evidence.
+
+Cumulative Layout Shift is a clear case. It drops every shift within half a second of a click,
+so a surface that jumps on every control flip still measures near zero. A prototype once reported 0.001 while visibly moving on each change.
+Interaction stability needs raw geometry instead, bounding rectangles compared before and after. CLS answers for load.
+
 ## Run the smallest scope that answers the question
 
 While diagnosing, run the fewest tests that resolve the current question, e.g. a single spec file, a single directory, explicit worker count. Not the full suite.
