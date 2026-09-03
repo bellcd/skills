@@ -1,0 +1,26 @@
+{
+  "name": "bellcd-skills",
+  "version": "1.0.0",
+  "description": "Standards for shipping software",
+  "author": {
+    "name": "Christian Bell",
+    "url": "https://github.com/bellcd"
+  },
+  "repository": "https://github.com/bellcd/skills",
+  "license": "MIT",
+  "keywords": ["engineering", "skills", "code-review", "git", "testing", "prose", "posthog"],
+  "skills": [
+    "./skills/afk-prompt-files",
+    "./skills/ag-grid",
+    "./skills/code-style",
+    "./skills/db-normalization",
+    "./skills/driving-chrome",
+    "./skills/fetching-web-sources",
+    "./skills/git-and-github-hygiene",
+    "./skills/mobile-push-approvals",
+    "./skills/posthog",
+    "./skills/prose-style",
+    "./skills/skills-maintenance",
+    "./skills/tight-feedback-loops"
+  ]
+}
