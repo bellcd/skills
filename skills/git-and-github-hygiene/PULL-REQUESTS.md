@@ -1,5 +1,13 @@
 # Pull Requests
 
+## Start from the repo's template
+
+Before writing a body, look for a pull request template in `.github/`, `docs/`, or the repository root. Where one exists it sets the body shape for that repo, and everything below applies on top of it.
+
+Fill in the sections that apply and delete the rest. A section the change has nothing to say for comes out whole, and so do the template's own guidance comments.
+
+An agent never meets the template by accident. `gh pr create` skips it whenever a body is supplied by flag, which is every agent PR, so reading the file is the only way it reaches one.
+
 ## Bodies stay short
 
 A few sentences: what the slice does and `Refs #n`. Nothing more.
