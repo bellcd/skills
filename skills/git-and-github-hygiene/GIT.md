@@ -6,6 +6,12 @@ Branch first. This covers every repo change, including file-mode bits like `chmo
 
 When a fix is needed mid-task while on main, propose alternatives. E.g. branching, worktrees, stashing, invocation workaround, etc.
 
+## Branch names carry the key in lowercase
+
+`pt-nnn-slug`. A `claude/` prefix on an agent-opened branch is fine, so `claude/pt-nnn-slug` reads the same way.
+
+The uppercase form of the key belongs in the pull request title, not here. That is the one place Jira needs it, and the one place that always exists.
+
 ## Related spikes share one branch
 
 When several spikes are sub-questions of one overarching question, keep them on a single long-lived branch rather than merging each one into main.
