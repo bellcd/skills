@@ -16,7 +16,7 @@ End the title with the key in parentheses, uppercase:
 gh pr create --title 'Build the narrative from an ordered list of cards (PT-191)' --body-file <path>
 ```
 
-Jira matches the key case-sensitively, so a lowercase key links nothing. The title is what puts the pull request in that ticket's Development panel.
+Jira matches the key case-insensitively in the branch name, the title, or a commit message, so a lowercase branch links on its own. The title carries it anyway: a branch cut for one ticket often ends up serving another, and only the title names the one this pull request is for.
 
 ## Bodies stay short
 

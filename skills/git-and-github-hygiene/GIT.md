@@ -10,7 +10,7 @@ When a fix is needed mid-task while on main, propose alternatives. E.g. branchin
 
 `pt-nnn-slug`. A `claude/` prefix on an agent-opened branch is fine, so `claude/pt-nnn-slug` reads the same way.
 
-The uppercase form of the key belongs in the pull request title, not here. That is the one place Jira needs it, and the one place that always exists.
+Lowercase is enough for Jira to link the branch. PULL-REQUESTS.md says why the title carries the key too.
 
 ## Related spikes share one branch
 
