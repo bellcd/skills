@@ -9,7 +9,7 @@
     {
       "name": "bellcd-skills",
       "source": "./",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "Standards and tool guidance for shipping software",
       "category": "engineering",
       "keywords": ["engineering", "skills", "code-review", "git", "testing", "prose"]
