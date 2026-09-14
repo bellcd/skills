@@ -53,3 +53,19 @@ So the revisit condition travels with the decision: a new third-party tag whose 
 A throw typed straight into the DevTools console does not, and records nothing at all. The absence reads as broken alerting rather than as the wrong instrument.
 
 There is no `posthog` global to call when the SDK is initialized as a module import rather than the snippet, so reaching for `posthog.captureException` in a console is a dead end twice over.
+
+Where the throw is meant to check source maps, it also has to originate inside a real chunk. A throw injected through an eval carries the eval as its only frame, so there is no application code for a map to resolve, however well the upload worked.
+
+## An automated browser records nothing
+
+posthog-js drops events it attributes to a bot, and a browser under automation is attributed to one. Overriding the headless user agent and `navigator.webdriver` does not lift it, because the remaining heuristics read other tells, such as the missing `window.chrome` and an empty plugin list.
+
+The symptom is quiet. Remote config answers, every extension loads including exception autocapture, and then nothing posts at all, not even a pageview. Other tags on the same page keep posting normally, so it reads as a PostHog outage rather than as a dropped event.
+
+Capture therefore has to be verified from a real browser, which is what the Chrome extension drives.
+
+## The map chain is verifiable without a captured exception
+
+When capture is the blocked part, symbolification can still be checked end to end from the uploaded artifact alone.
+
+The build stamps each chunk with an id and exposes the chunk-to-id map on the page. Look that id up as a symbol set reference, download it, and decode the mappings. Resolving a known minified position back to a repo file and line proves the maps are correct and keyed to the deployed bundle.
