@@ -20,6 +20,19 @@ Break dense paragraphs at their natural seams.
 
 When a paragraph packs several distinct ideas, such as what a thing is, then the decision, then the consequence, give each one its own chunk.
 
+## Line breaks follow the phrasing
+
+Break a line where the sentence pauses, at a clause or phrase boundary.
+Keep a phrase whole on one line wherever it fits.
+
+A configured wrap width is a guide, not a cut point.
+Running noticeably under it, or a little over it, to keep a phrase intact is the right trade.
+
+Split a line only when the phrase is genuinely too long to sit on one.
+Split it at the next natural pause, never at whatever word the width happens to land on.
+
+This holds anywhere prose is written: code comments, markdown, commit messages, pull request descriptions, issue bodies.
+
 ## References that rot
 
 File links, exact type signatures, and inline dates all go stale as code moves and issues close.
@@ -37,6 +50,6 @@ A date that genuinely needs recording belongs in a structured home, like a revis
 
 Durable mechanism goes in the README.
 Follow-up work goes in the tracking issue.
-Inline code and config comments stay terse, matching the comment density already in that file.
 
-An inline comment is a one-line pointer, or a `TODO(#n)` whose verb matches the actual plan.
+Code and config comments are the last resort, not the first.
+The code-style skill's Comments section governs them.

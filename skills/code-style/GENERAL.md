@@ -17,8 +17,21 @@ Prefer fixing violations in their own commits. I.e. "make the change easy, then 
 
 ## Comments
 
-- Prefer self-documenting variable names over comments.
-- Avoid comments that restate what the code already does (e.g. repeating a function's name).
-- Comments that explain a design choice or a non-obvious constraint start with `// NOTE:`.
-- TODOs in code are a single terse line pointing at deferred work, e.g. `// TODO(#420): add tests`. Rationale belongs in a `NOTE:` comment beside it, not in the TODO. Outside code, in markdown or another prose file with no `NOTE:` convention to hold it, a TODO carries its own rationale rather than shedding it.
-- Break comment lines where the sentence naturally pauses, at clause and phrase boundaries. Do this even when that makes lines noticeably shorter or longer than the usual wrap width. The same holds for prose in markdown and other documentation files. Wrap to the project's configured `printWidth`.
+The default is no comment. Names, file placement, call sites and test names carry the information,
+and unlike a comment they stay correct when the code moves.
+
+When a comment seems needed, first try to make it unnecessary.
+Rename the variable, extract the function, move the code next to what it relates to.
+
+Then apply the test: delete the comment and reread the code.
+If the code still answers the question, it stays deleted.
+
+- A comment that survives says why, not what: a design choice, a constraint the code cannot show, a reason the obvious approach was rejected. These start with `// NOTE:`.
+- Don't restate what the code already says, including a function's name, its signature, or its types.
+- One line. Two where the constraint genuinely needs it. A longer explanation belongs in the README, an ADR, or the tracking issue, with a one-line pointer at the code. A file-level `@fileoverview` comment is the other home for one, where the constraint genuinely spans the file rather than a line in it. It is not a default.
+- Don't narrate the change. No "now also handles X", no note of what the code used to do, no summary of what a review pass altered. Git holds that.
+- Don't caption steps inside a function. A comment introducing the next few lines is a function waiting to be extracted.
+- TODOs in code are a single terse line pointing at deferred work, with a verb matching the actual plan, e.g. `// TODO(#420): add tests`. Rationale belongs in a `NOTE:` comment beside it, not in the TODO. Outside code, in markdown or another prose file with no `NOTE:` convention to hold it, a TODO carries its own rationale rather than shedding it.
+- Prefer to break comment lines at clause and phrase boundaries rather than at the wrap width. The prose-style skill's line-breaks section governs this, and covers markdown and other documentation too.
+
+Reread every comment in a diff before handing it over, and delete the ones that fail the test.
