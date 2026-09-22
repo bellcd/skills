@@ -28,6 +28,7 @@ If the code still answers the question, it stays deleted.
 
 - A comment that survives says why, not what: a design choice, a constraint the code cannot show, a reason the obvious approach was rejected. These start with `// NOTE:`.
 - Don't restate what the code already says, including a function's name, its signature, or its types.
+- Don't explain a vendor's documented behavior. What a library or API does by design is in that vendor's docs. The note that survives says why this code answers it the way it does.
 - One line. Two where the constraint genuinely needs it. A longer explanation belongs in the README, an ADR, or the tracking issue, with a one-line pointer at the code. A file-level `@fileoverview` comment is the other home for one, where the constraint genuinely spans the file rather than a line in it. It is not a default.
 - Don't narrate the change. No "now also handles X", no note of what the code used to do, no summary of what a review pass altered. Git holds that.
 - Don't caption steps inside a function. A comment introducing the next few lines is a function waiting to be extracted.

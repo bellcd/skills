@@ -28,6 +28,16 @@ If expected-output generation must be abstracted to stay manageable, some accept
 
 Avoid mirrored only-for-test helpers that recreate logic to produce expected output.
 
+A large expected value gets a named const on its own line, and the actual value another, so the assertion reads as one short statement:
+
+```ts
+const expected = { status: 'error', message: 'Invalid form data', retryAfterSeconds: 30 };
+const actual = parseSubmission(formData);
+expect(actual).toEqual(expected);
+```
+
+An expected value short enough to sit on the assertion line stays inline.
+
 ## Assert whole structures
 
 Assert against the largest structure that makes sense for what the test is checking, rather than picking off individual properties one at a time. A whole-object assertion also catches unexpected extra or changed fields. There's no need to continually assert the same structure test after test.
