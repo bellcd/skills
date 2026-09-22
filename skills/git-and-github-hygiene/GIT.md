@@ -12,6 +12,9 @@ When a fix is needed mid-task while on main, propose alternatives. E.g. branchin
 
 Lowercase is enough for Jira to link the branch. PULL-REQUESTS.md says why the title carries the key too.
 
+Where a repo has no tracker and so no key, the shape is `<type>/<slug>`, e.g. `feat/payoff-estimate` or `refactor/state-seam`.
+The type is the kind of change, not a status.
+
 ## Related spikes share one branch
 
 When several spikes are sub-questions of one overarching question, keep them on a single long-lived branch rather than merging each one into main.
@@ -67,3 +70,11 @@ Run the local verification before pushing: unit tests, type-check, lint. A push 
 
 While the user is actively reviewing a branch, don't push at all.
 Batch the local work and push once they say the review is done.
+
+## Branch work ends in a pull request
+
+Work reaches main through a pull request, not through a local merge of the branch into main.
+
+The pull request is what records why the change landed.
+A branch merged locally arrives as a row of commits with no statement of intent around them.
+PULL-REQUESTS.md covers the body and title.
