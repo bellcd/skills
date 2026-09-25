@@ -24,6 +24,24 @@ Ask whether the issue belongs on a GitHub Project as part of that approval quest
 
 Project commands need a scope the default login does not carry. `gh auth refresh -s project` once, or every call fails on permissions rather than on anything to do with the project.
 
+## A ticket carries three things
+
+The problem, this ticket's solution, and the acceptance criteria. Any other section needs a good reason to survive, said out loud when proposing it. A section the repo's tracker doc requires, such as an epic's not-in-scope, has one.
+
+Keep the solution to a sentence or two of end state: what must become true. Paths, line numbers, code, and before/after tables belong to the implementor, who also owns the test level, type, and thoroughness.
+
+Write each acceptance criterion as an observable state, and name every surface it touches. That is what lets the solution stay general without losing scope. Leave the test tier unnamed.
+
+Rationale prose and test approach come out. So do risk and out-of-scope fencing, which are enforcement in the wrong place: mechanism enforces, ticket prose does not.
+
+A ticket or epic body names the pull request and what was decided, never how many reviews, threads, or comments it took.
+
+## "Needs a ticket first" means the ticket is the whole deliverable
+
+Draft the ticket, diagnose only as far as the problem and the acceptance criteria need, present it, and stop. The ticket is the only artifact of the turn.
+
+When the user has signaled they want to explore the options themselves, leave the solution open.
+
 ## Editing a published issue
 
 Fetch the current text to a local file, apply the change locally, and show the diff.
@@ -39,6 +57,8 @@ diff -u old.md new.md
 local repo, print the exact command the user can run themselves alongside the inline diff, using absolute paths.
 They re-run these in their own pager. `git diff --no-index <a> <b>` for colour, `--word-diff` for prose edits.
 
+**A wrong body or comment gets fixed in place**, through the same diff. Edit it to read correctly, as though the mistake never happened. The wrong claim goes, and no note announces the fix. The tracker keeps its own change history. A finding that still has value stays, stated plainly as a fact. Tell the user about the correction in conversation.
+
 ## Issues carry signal only
 
 Implementation decisions, UI-design choices, and slice plans do not go in issue comments.
@@ -48,6 +68,8 @@ Before drafting a comment, ask whether it changes what a human has to do or veri
 
 - **A real requirement** (e.g. a telemetry event) → an acceptance-criterion edit to the body, through the diff-first approval flow above.
 - **Everything else** → `NOTE:` and `TODO:` comments in code, prototypes, pull-request review.
+
+**Dates in a comment earn their place by differing from its timestamp.** The tracker already shows when a comment was posted, so "confirmed" plus today's date restates it. A deadline stays, and so does the date of work or a measurement from an earlier day. So does dated provenance the repo's tracker doc asks for.
 
 ## Recording a completed spike
 

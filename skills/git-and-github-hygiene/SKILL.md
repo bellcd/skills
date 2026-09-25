@@ -7,7 +7,7 @@ description: Use when branching, committing, pushing, opening or updating a PR, 
 
 Load only the reference file relevant to the current task:
 
-- [GIT.md](GIT.md): branches, commits, pushes
+- [GIT.md](GIT.md): branches, commits, pushes, worktrees
 - [PULL-REQUESTS.md](PULL-REQUESTS.md)
 - [ISSUES.md](ISSUES.md)
 

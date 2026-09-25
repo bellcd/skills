@@ -71,6 +71,18 @@ Run the local verification before pushing: unit tests, type-check, lint. A push 
 While the user is actively reviewing a branch, don't push at all.
 Batch the local work and push once they say the review is done.
 
+## A pushed branch takes new commits
+
+Once a branch is on the remote, every further change goes on as a new commit, however small. A messy history is fine.
+
+History that other people or CI can already see stays as it is. Rewriting it drops review context, detaches comments from their commits, and can discard someone else's work on the branch.
+
+`--force-with-lease` makes a force push safer, not wanted.
+
+Before the first push, rebasing and amending are fine.
+
+A force push is not the agent's call. When one looks genuinely necessary, say why and ask.
+
 ## Branch work ends in a pull request
 
 Work reaches main through a pull request, not through a local merge of the branch into main.
@@ -78,3 +90,11 @@ Work reaches main through a pull request, not through a local merge of the branc
 The pull request is what records why the change landed.
 A branch merged locally arrives as a row of commits with no statement of intent around them.
 PULL-REQUESTS.md covers the body and title.
+
+## Remove a worktree when its work is done
+
+Once the work a worktree was made for is finished, e.g. its pull request merged and its ticket closed, remove it and its local branch as part of close-out, unprompted.
+
+Fetch, then check that `git -C <worktree> status` is clean and that its head is an ancestor of `origin/main`. Then `git worktree remove <path>` and `git branch -d <branch>`. A dirty or unmerged tree is the user's call, so ask.
+
+Remove only worktrees your own work created.

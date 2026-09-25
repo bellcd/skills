@@ -8,6 +8,20 @@ Fill in the sections that apply and delete the rest. A section the change has no
 
 An agent never meets the template by accident. `gh pr create` skips it whenever a body is supplied by flag, which is every agent PR, so reading the file is the only way it reaches one.
 
+## A verbatim move ships as its own pull request
+
+Anything relocated with no edit to its content goes in a pull request of its own: a file moved between directories, a function lifted into a shared module, tests split across files, a table pulled out to a file, a file renamed. The behavior change is a second pull request, before or after it.
+
+A pure move reviews at a glance, since the only question is whether anything changed. Mixed with edits, it renders as a large delete plus a large add, and the lines that really changed hide inside it.
+
+When a task needs both, say up front that it will be two pull requests and in which order. A move discovered mid-change is the signal to stop and split.
+
+## A declaration travels with the code that reads it
+
+When a change splits into a pull request that sets a value and one whose code reads it, a declaration a linter checks against its readers goes in the reader's pull request.
+
+The standard case is an environment variable in `turbo.json`'s `globalPassThroughEnv`. `turbo/no-undeclared-env-vars` fails any workspace that reads an undeclared variable, so the declaration lands with the reading code, and the workflow's `env:` entry lands in the setting pull request. That one then reads as env-only.
+
 ## The title carries the ticket key
 
 End the title with the key in parentheses, uppercase:
