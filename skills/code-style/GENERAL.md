@@ -9,6 +9,7 @@ Prefer fixing violations in their own commits. I.e. "make the change easy, then 
 - Prefer creation functions over shared constants for non-primitive values. A shared object constant is one value aliased everywhere, so a mutation in one consumer leaks to all of them. A creation function hands every caller a fresh value and provides a natural seam for parameters later. Module-level regex constants are exempt, but flag the `lastIndex` hazard if `.test()` or `.exec()` enters the picture.
 - Prefer required parameters. Optional and default parameters should be used very sparingly, if at all.
 - Factor numeric time constants into conventional units, e.g. `24 * 60 * 60 * 1000`, not `86400 * 1000`.
+- A number holding a time value names its unit as a suffix, e.g. `disabledAtMs` or `timeoutS`. This covers timestamps as well as durations, since a bare `disabledAt` doesn't say e.g. seconds or milliseconds.
 - Reduce exports where possible. Keep functions, values, etc. module-local unless other modules actually need them.
 - Use 0-based indices everywhere and convert to 1-based only at the display site. Name such values `xIndex`. This does not cover ordinal domain scales that merely rank values, which keep their natural numbering.
 - Spell names out rather than abbreviating them to opaque acronyms. An acronym is fine when it is itself the canonical public API.
