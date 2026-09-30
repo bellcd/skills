@@ -82,6 +82,8 @@ A repo doc may hold a runbook of manual repro steps, plus a pointer to the issue
 
 ## Closing an issue
 
+Where the repo documents its own time tracking, such as worklogs in its tracker doc, that method replaces the `## Time spent` step and everything below on reconstructing the figure.
+
 Two edits to the body, both in the same push:
 
 1. **Tick every acceptance criterion that is actually done.** Leave genuinely unmet ones unticked and say so.
