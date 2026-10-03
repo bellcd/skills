@@ -12,6 +12,10 @@ For UI with many moving parts (e.g. 10 fields arranged in various ways):
 - One test can verify everything is present (if it should be).
 - Each more specific test asserts only its own concern, not all 10 fields again.
 
+## Test titles name the whole behavior
+
+Write each title as the whole behavior, subject included, e.g. `cases.assignWriter refuses a clinician not on the care team`. A `describe` block's name scrolls out of view in a long file, so it doesn't count toward the title.
+
 ## Expected outputs
 
 Do not use the implementation under test to generate its own expected output. Ideally
