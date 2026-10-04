@@ -16,3 +16,4 @@ These rules apply to both JavaScript and TypeScript files.
 - Never take a bare argument whose meaning is unclear at the call site. Either rename the function so the argument's meaning is obvious, or take a `params` object with named properties.
 - Prefer `for...of` loops over `.forEach()`.
 - Take a trailing subarray with an explicit non-negative start index: `items.slice(items.length - n)`, never `items.slice(-n)`.
+- Take the last element by index: `items[items.length - 1]`, never `items.at(-1)`.
