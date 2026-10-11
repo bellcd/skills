@@ -4,7 +4,7 @@ Copy everything below the rule. Fill each `<!-- slot -->` with what it asks for 
 
 ---
 
-<!-- slot: goal. One sentence: the change, the ticket key, and "one draft PR". -->
+<!-- slot: goal. One sentence: the change, the ticket key, and "one PR". -->
 
 Nobody is watching this run. Finish the work, or stop at a blocker you cannot get past. Either way, end by printing the report described at the bottom.
 
@@ -50,7 +50,7 @@ Run `/mattpocock-skills:code-review` on the branch diff against `origin/main`, b
 
 <!-- slot: lines the VM skill says every prompt must carry, e.g. refusing the cloud stop hook's commit request until the review is applied. -->
 
-Commit, push, and write the PR per `/bellcd-skills:git-and-github-hygiene`. Open it as a draft.
+Commit, push, and write the PR per `/bellcd-skills:git-and-github-hygiene`. Open it ready for review.
 
 <!-- slot: PR extras, e.g. a visual review section. Delete if none. -->
 
