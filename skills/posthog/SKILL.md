@@ -38,6 +38,8 @@ Suppressed is for noise genuinely outside the app's control, and it means no ale
 
 Leaving an issue active is the one outcome that looks like triage and is not.
 
+Every triage ends with a plain-prose comment for the user to paste onto the issue, in a fenced block: the likely explanation, the evidence, and the outcome with its reason. No PII, such as emails or distinct ids.
+
 ## Suppression is wider than the thing being suppressed
 
 A cross-origin script error reaches `window.onerror` stripped of its message, file, line and stack. The browser does this deliberately. All that survives is the literal string `Script error.`, so the fingerprint has nothing to discriminate on and every such error from every script collapses into one issue.

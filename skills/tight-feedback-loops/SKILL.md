@@ -16,7 +16,7 @@ The first slice is the route plus the shell of the views, where the components w
 Then one hard or risky part on its own. Then the rest, piece by piece.
 Starting with the hardest part is fine, and often better.
 
-Aim for a few hundred lines per slice, less for a shell.
+Aim for a few hundred lines per slice, less for a shell. A mechanical rename is exempt and ships as one pull request, since it holds one decision.
 When work is already built too wide, slice the existing files into sequential commits rather than presenting one large diff.
 
 The house mechanism is the mattpocock plugin skills: `/implement`, which calls `/tdd` for vertical slices, and `/to-tickets` for tracer-bullet tickets.
