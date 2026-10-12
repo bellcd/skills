@@ -41,6 +41,26 @@ When a pointer does earn its place in prose, name what it points at: e.g. `Group
 
 A date that genuinely needs recording belongs in a structured home, like a revision-history table or a decision log.
 
+## Names the reader knows
+
+Never refer to an item by a label the reader won't recognize, such as a draft's C9 or R31. Say what it is. A ticket key is fine paired with what the ticket is.
+
+## Paths the reader will copy
+
+Write the whole absolute path for anything the reader will open or copy, in a code span. Never elide the middle, and never let a basename stand in for a location. `file.ts:12` stays fine for pointing at code under discussion.
+
+## Showing a changeset
+
+Show a changeset for review as a fenced `diff` block in the reply, never as raw tool output.
+
+- For prose or a ticket body, hunk headers name the section, e.g. `@@ Problem @@`, not line numbers.
+- Keep context lines around each change. Name the unchanged sections skipped.
+- Leave lockfiles and generated code out of the diff, the stat and every count. Say in one line what was left out.
+
+## US spelling
+
+Write "color", not "colour", and likewise for every US/UK split. Fix a stray one in files the change already touches. Don't sweep other files for it.
+
 ## Where the explanation goes
 
 Durable mechanism goes in the README. Follow-up work goes in the tracking issue.
