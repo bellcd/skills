@@ -17,3 +17,5 @@ These rules apply to both JavaScript and TypeScript files.
 - Prefer `for...of` loops over `.forEach()`.
 - Take a trailing subarray with an explicit non-negative start index: `items.slice(items.length - n)`, never `items.slice(-n)`.
 - Take the last element by index: `items[items.length - 1]`, never `items.at(-1)`.
+- Write a string holding backslashes, such as a regex source, with `String.raw` rather than doubled escapes: ``String.raw`\d+\.\d+` ``, not `'\\d+\\.\\d+'`.
+- Take a fixed position by destructuring: `const [first, second] = parts`, not `parts[0]` and `parts[1]`.
