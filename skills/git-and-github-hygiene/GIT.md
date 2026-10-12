@@ -29,6 +29,12 @@ Prototype files must not ride along into the feature commit. Check `git status` 
 
 The winning decision is what gets folded into the real code.
 
+## No binaries over 500 KB
+
+Don't commit a binary over 500 KB, e.g. an image, video or design source file. It bloats every clone for good.
+
+When a large asset needs a home, ask where it goes instead of committing it.
+
 ## Commits wait for an explicit go-ahead
 
 Every slice stays uncommitted until the user has reviewed the working-tree diff and said to commit.
