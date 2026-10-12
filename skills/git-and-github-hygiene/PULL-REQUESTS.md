@@ -47,9 +47,15 @@ The diff and the commits are the record. Bodies that carry more detail than that
 
 Do not include text about what tests were or were not run. That is noise. CI should always run tests.
 
+## Reply on every addressed review thread
+
+In the same pass as the push, reply on each thread with what changed and the commit, e.g. "Removed in 0fe4deb1." Say so when a comment is declined or only partly addressed.
+
 ## Move the ticket only after verification
 
 Moving a Jira ticket is always a separate act from the merge. Tick the acceptance criteria and move it to Done only when every one is verified _before_ the merge.
+
+Whether passing in lower environments verifies a criterion depends on the work. Unless the ticket says, ask the user.
 
 When the fix can only be confirmed _after_ it merges, add a short Verification section saying how and when confirmation happens, and leave the ticket where it is for the user to move once it does.
 
