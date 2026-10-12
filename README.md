@@ -46,6 +46,7 @@ npx skills update code-style      # project install, run from the project root
 
 - [afk-prompt-files](skills/afk-prompt-files/SKILL.md)
 - [ag-grid](skills/ag-grid/SKILL.md)
+- [artifact-design](skills/artifact-design/SKILL.md)
 - [code-style](skills/code-style/SKILL.md)
 - [db-normalization](skills/db-normalization/SKILL.md)
 - [driving-chrome](skills/driving-chrome/SKILL.md)
