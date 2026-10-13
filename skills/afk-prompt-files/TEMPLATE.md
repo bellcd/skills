@@ -50,7 +50,7 @@ Run `/mattpocock-skills:code-review` on the branch diff against `origin/main`, b
 
 <!-- slot: lines the VM skill says every prompt must carry, e.g. refusing the cloud stop hook's commit request until the review is applied. -->
 
-Commit, push, and write each PR per `/bellcd-skills:git-and-github-hygiene`. Stack each PR on the previous one's branch, and open them ready for review.
+Commit, push, and write each PR per `/bellcd-skills:git-and-github-hygiene`. Stack each PR on the previous one's branch. Open each as a draft, and mark it ready for review once you won't push to it again.
 
 <!-- slot: PR extras, e.g. a visual review section. Delete if none. -->
 
