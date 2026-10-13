@@ -11,7 +11,7 @@ General style rules in [JAVASCRIPT.md](JAVASCRIPT.md) also apply to TypeScript f
   type User = z.infer<typeof zUser>;
   ```
 
-- Inline a type that fits on a line rather than reaching for it by indexed access: `'trialing' | 'active'`, not `SubscriptionStatus['type']`.
+- Never reach for a type by indexed access, e.g. `SubscriptionStatus['type']` or `ReturnType<typeof f>['items'][number]`. Use the named type, exporting it where it's defined if it isn't yet. Or inline it if it fits on a line: `'trialing' | 'active'`.
 - Only use the `satisfies` keyword when it's actually needed.
 - Use `undefined` instead of `null` for app-internal absence. Reserve `null` for boundaries to systems you don't control: E.g. React render returns, DOM/framework API types, external payloads.
 - Array types: `T[]` is fine for a simple element type (`string[]`, `User[]`). When the element type is more complicated, such as an inline object literal, a union, or a function type, use the `Array<T>` form so the brackets don't trail off the end of a long line:
