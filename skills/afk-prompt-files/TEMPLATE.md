@@ -4,7 +4,7 @@ Copy everything below the rule. Fill each `<!-- slot -->` with what it asks for 
 
 ---
 
-<!-- slot: goal. One sentence: the change, the ticket key, and "one PR". -->
+<!-- slot: goal. One sentence: the change, the ticket key, and how many PRs. Each stays within the size limit in git-and-github-hygiene, so a refactor with pinning tests is two. -->
 
 Nobody is watching this run. Finish the work, or stop at a blocker you cannot get past. Either way, end by printing the report described at the bottom.
 
@@ -50,7 +50,7 @@ Run `/mattpocock-skills:code-review` on the branch diff against `origin/main`, b
 
 <!-- slot: lines the VM skill says every prompt must carry, e.g. refusing the cloud stop hook's commit request until the review is applied. -->
 
-Commit, push, and write the PR per `/bellcd-skills:git-and-github-hygiene`. Open it ready for review.
+Commit, push, and write each PR per `/bellcd-skills:git-and-github-hygiene`. Stack each PR on the previous one's branch, and open them ready for review.
 
 <!-- slot: PR extras, e.g. a visual review section. Delete if none. -->
 
@@ -58,8 +58,9 @@ Commit, push, and write the PR per `/bellcd-skills:git-and-github-hygiene`. Open
 
 Print this and stop:
 
-- The PR URL
-- Each acceptance criterion, met or not, with its evidence
-- Each verification command and its result
+- The PR URLs
+- Each acceptance criterion not met, and why
 - Every failing test and every review finding not applied, by name. Never summarize one away
 - Anything that could not run here
+
+Leave out everything that went as planned.
