@@ -8,6 +8,14 @@ Fill in the sections that apply and delete the rest. A section the change has no
 
 An agent never meets the template by accident. `gh pr create` skips it whenever a body is supplied by flag, which is every agent PR, so reading the file is the only way it reaches one.
 
+## Pull requests stay within 400 changed lines
+
+Logic and dense changes stay at 400 changed lines or fewer, tests included. A larger one splits, e.g. tests that pin behavior in their own pull request ahead of the change. A run that can't merge between them stacks the second on the first's branch.
+
+Mechanical changes are exempt: a codemod, a verbatim move, a lock file, a large JSON table.
+
+Plan the split up front. A ticket estimated well past a day rarely fits one pull request.
+
 ## A verbatim move ships as its own pull request
 
 Anything relocated with no edit to its content goes in a pull request of its own: a file moved between directories, a function lifted into a shared module, tests split across files, a table pulled out to a file, a file renamed. The behavior change is a second pull request, before or after it.
@@ -44,6 +52,8 @@ Written out in full, because GitHub does not linkify a Jira key. That host is th
 
 No detail-by-detail recap of the change, and explicitly no list of what a code-review pass altered.
 The diff and the commits are the record. Bodies that carry more detail than that go unread.
+
+This overrides the `pr` skill's body shape where both are installed.
 
 Do not include text about what tests were or were not run. That is noise. CI should always run tests.
 
