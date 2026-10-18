@@ -4,7 +4,7 @@ Copy everything below the rule. Fill each `<!-- slot -->` with what it asks for 
 
 ---
 
-<!-- slot: goal. One sentence: the change, the ticket key, and how many PRs. Each stays within the size limit in git-and-github-hygiene, so a refactor with pinning tests is two. -->
+<!-- slot: goal. One sentence: the change, the ticket key, and how many PRs. Each is one vertical slice per git-and-github-hygiene, so a refactor with pinning tests is two. -->
 
 Nobody is watching this run. Finish the work, or stop at a blocker you cannot get past. Either way, end by printing the report described at the bottom.
 
