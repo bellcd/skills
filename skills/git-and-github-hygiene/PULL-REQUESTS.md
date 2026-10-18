@@ -8,11 +8,11 @@ Fill in the sections that apply and delete the rest. A section the change has no
 
 An agent never meets the template by accident. `gh pr create` skips it whenever a body is supplied by flag, which is every agent PR, so reading the file is the only way it reaches one.
 
-## Pull requests stay within 400 changed lines
+## Pull requests are vertical slices of about 400–500 changed lines
 
-Logic and dense changes stay at 400 changed lines or fewer, tests included. A larger one splits, e.g. tests that pin behavior in their own pull request ahead of the change. A run that can't merge between them stacks the second on the first's branch.
+A pull request is one vertical slice. 400–500 changed lines, tests included, is a target, not a cap. A single slice over it ships whole. One holding several slices splits, e.g. tests that pin behavior in their own pull request ahead of the change. A run that can't merge between them stacks the second on the first's branch.
 
-Mechanical changes are exempt: a codemod, a verbatim move, a lock file, a large JSON table.
+Mechanical changes are exempt: a codemod, a rename, a verbatim move, a lock file, a large JSON table.
 
 Plan the split up front. A ticket estimated well past a day rarely fits one pull request.
 
