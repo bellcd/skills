@@ -89,6 +89,10 @@ Before the first push, rebasing and amending are fine.
 
 A force push is not the agent's call. When one looks genuinely necessary, say why and ask.
 
+## Merge commits get a written message
+
+Merge with `git merge -F <file>`, carrying the trailers and markers any commit needs. A default message drops them.
+
 ## Branch work ends in a pull request
 
 Work reaches main through a pull request, not through a local merge of the branch into main.
