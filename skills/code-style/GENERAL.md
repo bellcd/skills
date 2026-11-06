@@ -3,6 +3,8 @@
 These rules apply to code in any language.
 
 They apply to new code and to code already being edited. In general, older code that predates a rule is not a pattern to copy.
+A pattern already in the codebase is no reason by itself to repeat a poor one. Start from doing it properly.
+Following the poor pattern anyway is a judgment call, case by case, e.g. weighing consistency and a sweep's scope against the harm the pattern does. Name the tradeoff to the user when you do.
 Sweep pre-existing violations in the file(s) being touched. How wide to go with a sweep depends on how much it increases scope, often a user-level decision.
 Prefer fixing violations in their own commits. I.e. "make the change easy, then make the easy change"
 
